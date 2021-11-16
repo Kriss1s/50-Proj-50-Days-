@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: skyblue;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress-container{
+
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+position: relative;
+max-width: 100%;
+    width: 30em;
+margin-bottom: 2em;
+}
+.progress-container::before{
+    content: "";
+    background-color: #e0e0e0;
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.progress{
+    background-color: #3498db;
+    position: absolute;
+    height: 4px;
+    top: 50%;
+    left: 0;
+    width: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.circle{
+    background-color: white;
+    color:#999;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #e0e0e0 3px solid;
+    transition: border 0.4s ease;
+}
+
+.buttons{
+    width: 50%;
+}
+.btn{
+    background: skyblue;
+    border: none;
+    text-shadow: 0px 0px 2px white,0px 0px 2px white,0px 0px 2px white,0px 0px 2px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white,0px 0px 1px white;
+    font-size: 2em;
+    font-weight: 700;
+    color: skyblue;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0.25em 0.75em;
+}
+.btn:active{
+transform: scale(0.9);
+}
+.disabled{
+    opacity: 65%;
+    cursor: not-allowed;
+}
+
+.active{
+    border-color: #3498db;
+}
+
+
